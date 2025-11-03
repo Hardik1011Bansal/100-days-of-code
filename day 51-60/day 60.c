@@ -27,17 +27,24 @@ int main()
     }
     for(int i=0;i<=n-k;i++)
     {
-        largest=a[i];
+        largest=arr[i];
         for(int j=i+1;j<i+k;j++)
         {
-            if(a[j]>largest)
+            if(arr[j]>largest)
             {
-                largest=a[j];
+                largest=arr[j];
             }
         }
+        if(i==n-k)   // in order to remove the extra space character after the last output
+        {
+            printf("%d",largest);
+        }
+        else
+        {
         printf("%d ",largest);
+        }
     }
-    printf("%d",sum);
+    
     
     return 0;
 }
